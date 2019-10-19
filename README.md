@@ -18,7 +18,7 @@ The devices work correctly and the firmware performs quite well in this version,
 
 Once degradations sets in, it is no longer possible to recover, except by forcing the device restart.
 
-With this in mind and after exhausting the research on corrective solutions, I decided to make a rather generic watchdog script that all it does is measure the ping to a list of destinations, and if none of the destinations is reachable or the minimum ping time is above a given threshold for all destinations, it restarts the device. This allows the impact to be minimized, and the need for manual intervention.
+With this in mind and after exhausting the research on corrective solutions, I decided to make a rather generic watchdog script that all it does is measure the ping to a list of destinations, and if none of the destinations is reachable or the minimum ping time is above a given threshold for all destinations, it restarts the device. This allows the impact to be minimized, and reduces the need for manual intervention.
 
 ## Usage
 
