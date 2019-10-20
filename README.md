@@ -42,14 +42,11 @@ RTT_THRESHOLD=500
 # List of destinations to analyze:
 
 IP_LIST="192.168.2.1 192.168.1.30 192.168.1.23"
-IP_LIST_SIZE=3
+MIN_DEGRADED=3
 ```
 
 The *RTT_THRESHOLD* parameter defines the time in milliseconds, above which we consider the minimum ping RTT to be typical of degraded connectivity.
 
 The *IP_LIST* parameter defines the list of IP addresses that we want to observe, to determine if the connectivity is degraded on the router side or not. The list should contain destinations that are known to be permanently connected and stable.
 
-The *IP_LIST_SIZE* defines the size of the list, and exists due to the inability of the ash interpreter to provide the length of arrays.
-
-
-
+The *MIN_DEGRADED* parameter defines the minimum number of degraded nodes that are enough to reboot the device.
