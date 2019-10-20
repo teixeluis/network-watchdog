@@ -8,7 +8,7 @@ RTT_THRESHOLD=500
 # List of destinations to analyze:
 
 IP_LIST="192.168.2.1 192.168.1.30 192.168.1.23"
-IP_LIST_SIZE=3
+MIN_DEGRADED=3
 
 isDegraded () {
         ping -c 5 $1
@@ -43,7 +43,7 @@ done
 
 logger "Found " $res " degraded destinations."
 
-if [[ $res -eq $IP_LIST_SIZE ]];
+if [[ $res -ge $MIN_DEGRADED ]];
 then
         logger "Going to reboot as networking subsystem seems to be broken."
         reboot
